@@ -15,9 +15,9 @@ const timeInterval = 3000;
 let interval = setInterval(proxSlide, timeInterval);
 let count = 1;
 
-const oneImage = "Images/IMG.jpg";
-const twoImage = "Images/IMG1.jpg";
-const threeImage = "Images/IMG2.jpg";
+const oneImage = "images/IMG.jpg";
+const twoImage = "images/IMG1.jpg";
+const threeImage = "images/IMG2.jpg";
 
 function slideAnt() {
   clearInterval(interval);
