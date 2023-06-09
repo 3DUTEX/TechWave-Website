@@ -54,7 +54,7 @@ a {
 
 .nav-link {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   transition: 0.3s;
 }
 
@@ -64,6 +64,28 @@ a {
   border-radius: 10px;
   text-shadow: 0 0 0.5em #fff;
   box-shadow: 0 0 10px rgb(227, 14, 8);
+}
+
+.pesquisa {
+  display: flex;
+  width: 100%;
+}
+
+.pesquisa input {
+  font-size: 1.1rem;
+  width: 100%;
+  height: 5vh;
+  background: #373737;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.pesquisa img {
+  padding-left: 10px;
+  width: 6vh;
+  cursor: pointer;
 }
 
 .hamburguer {
@@ -117,7 +139,7 @@ a {
 }
 
 #btnProx:hover {
-  filter: drop-shadow(0 0 4px #fff);
+  filter: drop-shadow(0 0 3px #fff);
   transform: scale(1.1);
 }
 
@@ -128,7 +150,7 @@ a {
 
 #btnAnt:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 4px #fff);
+  filter: drop-shadow(0 0 3px #fff);
 }
 
 @media (max-width: 768px) {
@@ -151,13 +173,12 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 100px;
+    top: 12vh;
     gap: 0;
     background-color: #000000;
     text-align: center;
     flex-direction: column;
     width: 100%;
-    height: 20vh;
     transition: 0.3s;
   }
 
@@ -180,6 +201,19 @@ a {
 
   .nav-menu.active {
     left: 0;
+  }
+
+  .pesquisa {
+    justify-content: right;
+    padding-right: 7%;
+  }
+
+  .pesquisa input {
+    width: 70%;
+  }
+
+  .pesquisa img {
+    width: 70%;
   }
 
   .carrossel {
