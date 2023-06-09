@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechWave</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
     <header>
@@ -24,6 +25,14 @@
         </div>
       </nav>
     </header>
-    <script src="main.js"></script>
+
+    <section class="carrossel">
+      <h1>LOJA FÍSICA</h1>
+      <div id="carrossel">
+        <img src="images/seta1.png" id="btnAnt" onclick="slideAnt()" />
+        <img src="Images/IMG.jpg" id="imageCarrossel" />
+        <img src="images/seta.png" id="btnProx" onclick="proxSlide()" />
+      </div>
+    </section>
   </body>
 </html>

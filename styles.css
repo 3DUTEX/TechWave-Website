@@ -5,10 +5,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
   background-color: #000000;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 li {
@@ -22,7 +34,7 @@ a {
 
 .logo img {
   padding: 20px 0;
-  width: 15vh;
+  width: 20vh;
 }
 
 .navbar {
@@ -31,6 +43,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 34px;
+  box-shadow: 0 0 5px #000;
 }
 
 .nav-menu {
@@ -40,11 +53,17 @@ a {
 }
 
 .nav-link {
-  transition: 0.5s ease;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
-  color: #ac0505;
+  background: rgb(227, 14, 8);
+  padding: 10px 40px;
+  border-radius: 10px;
+  text-shadow: 0 0 0.5em #fff;
+  box-shadow: 0 0 10px rgb(227, 14, 8);
 }
 
 .hamburguer {
@@ -54,12 +73,62 @@ a {
 
 .bar {
   display: block;
-  width: 28px;
-  height: 3px;
+  width: 40px;
+  height: 5px;
   margin: 5px auto;
   border-radius: 2px;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
+}
+
+.carrossel {
+  padding-top: 14vh;
+  text-align: center;
+  width: 100%;
+}
+
+.carrossel h1 {
+  background: rgb(227, 14, 8);
+  padding: 10px;
+  font-size: 3rem;
+  color: #fff;
+  /* text-shadow: 0 0 0.3em #fff; */
+}
+
+#carrossel {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#imageCarrossel {
+  width: 100%;
+  height: 75vh;
+}
+
+#btnAnt,
+#btnProx {
+  left: 90%;
+  position: absolute;
+  cursor: pointer;
+  height: 10%;
+  transition: 0.3s;
+}
+
+#btnProx:hover {
+  filter: drop-shadow(0 0 4px #fff);
+  transform: scale(1.1);
+}
+
+#btnAnt {
+  left: 5%;
+  transition: 0.3s;
+}
+
+#btnAnt:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 4px #fff);
 }
 
 @media (max-width: 768px) {
@@ -88,6 +157,7 @@ a {
     text-align: center;
     flex-direction: column;
     width: 100%;
+    height: 20vh;
     transition: 0.3s;
   }
 
@@ -95,7 +165,49 @@ a {
     margin: 16px 0;
   }
 
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .nav-link:hover {
+    padding: 10px 150px;
+  }
+
+  .logo img {
+    padding: 20px 0;
+    width: 15vh;
+  }
+
   .nav-menu.active {
     left: 0;
+  }
+
+  .carrossel {
+    padding-top: 12vh;
+  }
+
+  .carrossel h1 {
+    font-size: 1.9rem;
+  }
+
+  #imageCarrossel {
+    width: 100%;
+    height: 50vh;
+  }
+
+  #btnAnt,
+  #btnProx {
+    position: absolute;
+    cursor: pointer;
+    height: 60px;
+    transition: 0.3s;
+  }
+
+  #btnProx {
+    left: 80%;
+  }
+
+  #btnAnt {
+    left: 5%;
   }
 }
