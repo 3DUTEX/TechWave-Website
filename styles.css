@@ -15,6 +15,20 @@ header {
   width: 100%;
 }
 
+#seta-cima {
+  position: fixed;
+  top: 70%;
+  left: 90%;
+  width: 10vh;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 9;
+}
+
+#seta-cima:hover {
+  transform: scale(1.1);
+}
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url("images/background.jpg");
@@ -212,6 +226,7 @@ a {
   color: #fff;
   font-size: 2.5rem;
   background: rgb(227, 14, 8);
+  box-shadow: 0 0 20px #000;
   padding: 10px;
 }
 
@@ -258,6 +273,7 @@ a {
   background: none;
   font-size: 1.8rem;
   font-weight: bold;
+  box-shadow: none;
 }
 
 .prodGam h2 {
@@ -271,7 +287,99 @@ a {
   color: rgb(227, 14, 8);
 }
 
+.contato {
+  top: 10%;
+  position: fixed;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh;
+  margin: 0 15%;
+  width: 70%;
+  height: auto;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato label {
+  padding: 20px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.contato form input {
+  padding: 10px;
+  width: 50vh;
+  height: 5vh;
+  margin-bottom: 1rem;
+  color: white;
+  background: #2e2e2e;
+  border: 0.125rem solid transparent;
+  border-radius: 30px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contato form textarea {
+  padding: 10px;
+  height: 5vh;
+  margin-bottom: 1rem;
+  color: white;
+  background: #2e2e2e;
+  border: 0.125rem solid transparent;
+  border-radius: 30px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  min-height: 12.5rem;
+  resize: none;
+}
+
+.contato input:hover,
+form input:focus,
+textarea:hover,
+textarea:focus {
+  outline: none;
+  border-color: rgb(227, 14, 8);
+  box-shadow: 0 0 0 0.3125rem rgba(45, 45, 45, 0.6);
+}
+
+.contato textarea:focus {
+  border-color: rgb(227, 14, 8);
+}
+
+.contato textarea:hover {
+  border-color: rgb(227, 14, 8);
+}
+
+.contato form button {
+  height: 5vh;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 99px;
+  color: white;
+  background: rgb(227, 14, 8);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato button:hover,
+.contato button:focus {
+  outline: none;
+  background: rgb(198, 14, 8);
+}
+
 @media (max-width: 768px) {
+  #seta-cima {
+    top: 85%;
+    left: 70%;
+  }
+
   .hamburguer {
     display: block;
   }
@@ -409,5 +517,32 @@ a {
     width: 41vh;
     height: 41vh;
     transform: scaleX(-1);
+  }
+
+  .contato {
+    top: 14vh;
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+    padding: 0px;
+  }
+
+  .contato form input,
+  textarea,
+  button {
+    width: 35vh;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .contato form button {
+    width: 35vh;
+    padding: 0;
+    margin: 0;
+    margin: 20px 0;
+  }
+
+  .contato form label {
+    font-size: 1.7rem;
   }
 }

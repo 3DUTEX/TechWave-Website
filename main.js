@@ -7,9 +7,9 @@ hamburguer.addEventListener("click", () => {
 });
 
 //Carrossel seta com looping - by: t3xdev
-let btnAnt = document.querySelector("#btnAnt");
-let btnProx = document.querySelector("#btnProx");
-let image = document.querySelector("#imageCarrossel");
+const btnAnt = document.querySelector("#btnAnt");
+const btnProx = document.querySelector("#btnProx");
+const image = document.querySelector("#imageCarrossel");
 
 const timeInterval = 3000;
 let interval = setInterval(proxSlide, timeInterval);
@@ -60,3 +60,38 @@ function proxSlide() {
       break;
   }
 }
+
+const btnContato = document.querySelector("#btnContato");
+const contato = document.querySelector(".contato");
+const btnEnviar = document.querySelector("#btnEnviar");
+
+let checked = false;
+function checar() {
+  if (checked == false) {
+    contato.style.display = "none";
+  } else {
+    contato.style.display = "flex";
+  }
+}
+
+btnContato.addEventListener("click", function () {
+  checked = !checked;
+  checar();
+});
+
+const inputNome = document.querySelector("#nome");
+const inputEmail = document.querySelector("#email");
+const textarea = document.querySelector("#mensagem");
+
+btnEnviar.addEventListener("click", function () {
+  if (inputNome.value == "") {
+    alert("Preencha o campo nome");
+  } else if (inputEmail.value == "") {
+    alert("Preencha o campo email");
+  } else if (textarea.value == "") {
+    alert("Preencha o campo mensagem");
+  } else {
+    checked = !checked;
+    checar();
+  }
+});
