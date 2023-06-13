@@ -292,23 +292,33 @@ a {
 }
 
 .contato {
-  top: 10%;
-  position: fixed;
-  display: none;
-  text-align: center;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  padding: 5vh;
-  margin: 0 15%;
-  width: 70%;
-  height: auto;
-  border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  text-align: center;
+}
+
+.visibleOn {
+  visibility: visible;
+  top: 12%;
+  transition: 0.5s ease;
+}
+
+.visibleOFF{
+  top: -100%;
+  visibility: hidden;
+  transition: 0.5s ease;
 }
 
 .contato form {
+  position: fixed;
+  border-radius: 0  0  30px 30px;
   display: flex;
+  padding: 20px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .contato label {
@@ -331,14 +341,13 @@ a {
 }
 
 .contato form textarea {
-  padding: 10px;
-  height: 5vh;
   margin-bottom: 1rem;
   color: white;
   background: #2e2e2e;
   border: 0.125rem solid transparent;
   border-radius: 30px;
   transition: border-color 0.3s, box-shadow 0.3s;
+  min-width: 50vh;;
   min-height: 12.5rem;
   resize: none;
 }
@@ -362,7 +371,7 @@ textarea:focus {
 
 .contato form button {
   height: 5vh;
-  padding: 10px;
+  padding: 0 23vh;
   font-weight: bold;
   border: none;
   border-radius: 99px;
@@ -375,7 +384,7 @@ textarea:focus {
 .contato button:hover,
 .contato button:focus {
   outline: none;
-  background: rgb(198, 14, 8);
+  background: rgb(143, 7, 2);
 }
 
 @media (max-width: 768px) {
@@ -531,6 +540,10 @@ textarea:focus {
     padding: 0px;
   }
 
+  .contato form{
+    border-radius: 30px;
+  }
+
   .contato form input,
   textarea,
   button {
@@ -546,7 +559,21 @@ textarea:focus {
     margin: 20px 0;
   }
 
+  .contato form textarea{
+    min-width: 35vh;
+  }
+
   .contato form label {
     font-size: 1.7rem;
+  }
+
+  .visibleOFF{
+    top: 14%;
+    left: -100%;
+  }
+
+  .visibleOn{
+    top: 14%;
+    left: 0;
   }
 }

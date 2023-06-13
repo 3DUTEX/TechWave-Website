@@ -64,13 +64,14 @@ function proxSlide() {
 const btnContato = document.querySelector("#btnContato");
 const contato = document.querySelector(".contato");
 const btnEnviar = document.querySelector("#btnEnviar");
+const form = document.querySelector("form");
 
 let checked = false;
 function checar() {
   if (checked == false) {
-    contato.style.display = "none";
+    form.className = "contato visibleOFF";
   } else {
-    contato.style.display = "flex";
+    form.className = "contato visibleOn";
   }
 }
 
