@@ -15,12 +15,14 @@ header {
   width: 100%;
 }
 
-::-webkit-scrollbar{ /*barra de rolagem (fundo)*/
+::-webkit-scrollbar {
+  /*barra de rolagem (fundo)*/
   width: 10px;
   background-color: #fff;
 }
 
-::-webkit-scrollbar-thumb{ /*barra de rolagem (barra)*/
+::-webkit-scrollbar-thumb {
+  /*barra de rolagem (barra)*/
   width: 10px;
   background-color: rgb(227, 14, 8);
 }
@@ -124,40 +126,37 @@ a {
   /* text-shadow: 0 0 0.3em #fff; */
 }
 
-#carrossel {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-#imageCarrossel {
-  width: 100%;
-  height: 50%;
-}
-
-#btnAnt,
-#btnProx {
-  left: 90%;
-  position: absolute;
-  cursor: pointer;
-  height: 10%;
-  transition: 0.3s;
-}
-
-#btnProx:hover {
-  filter: drop-shadow(0 0 3px #fff);
-  transform: scale(1.1);
-}
-
 #btnAnt {
-  left: 5%;
+  position: absolute;
+  left: 10%;
   transition: 0.3s;
 }
 
-#btnAnt:hover {
+#btnProx {
+  position: absolute;
+  left: 85%;
+  transition: 0.3s;
+}
+
+#btnAnt:hover,
+#btnProx:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 3px #fff);
+}
+
+#carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imageCarrossel {
+  width: 100%;
+  height: 50vh;
+  background-image: url("images/IMG.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s ease;
 }
 
 .produtoDestaque {
@@ -292,15 +291,16 @@ a {
   transition: 0.5s ease;
 }
 
-.visibleOFF{
+.visibleOFF {
   top: -100%;
   visibility: hidden;
   transition: 0.5s ease;
 }
 
 .contato form {
+  width: 80%;
   position: fixed;
-  border-radius: 0  0  30px 30px;
+  border-radius: 0 0 30px 30px;
   display: flex;
   padding: 20px;
   flex-direction: column;
@@ -313,7 +313,7 @@ a {
   padding: 20px 0;
   color: #fff;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: calc(0.7rem + 1vw);
 }
 
 .contato form input {
@@ -335,7 +335,7 @@ a {
   border: 0.125rem solid transparent;
   border-radius: 30px;
   transition: border-color 0.3s, box-shadow 0.3s;
-  min-width: 50vh;;
+  min-width: 50vh;
   min-height: 12.5rem;
   resize: none;
 }
@@ -375,17 +375,17 @@ textarea:focus {
   background: rgb(143, 7, 2);
 }
 
-@media(max-width: 1210px){
-  .produtosGamers{
+@media (max-width: 1210px) {
+  .produtosGamers {
     margin: 0;
     padding: 0;
   }
 
-  .produtoDestaque div h1{
+  .produtoDestaque div h1 {
     font-size: 3rem;
   }
 
-  .prodGroup{
+  .prodGroup {
     margin: 0;
     padding: 0;
     display: flex;
@@ -394,8 +394,8 @@ textarea:focus {
     text-align: center;
     flex-wrap: wrap;
   }
-  
-  .prodGam{
+
+  .prodGam {
     margin: 2%;
     padding: 0;
     width: 40%;
@@ -403,15 +403,14 @@ textarea:focus {
     height: auto;
   }
 
-  .prodGam h2{
+  .prodGam h2 {
     padding: 30px 0;
   }
 
-  .prodGam img{
+  .prodGam img {
     width: 30vh;
     height: 30vh;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -553,7 +552,7 @@ textarea:focus {
     padding: 0px;
   }
 
-  .contato form{
+  .contato form {
     border-radius: 30px;
   }
 
@@ -572,7 +571,7 @@ textarea:focus {
     margin: 20px 0;
   }
 
-  .contato form textarea{
+  .contato form textarea {
     min-width: 35vh;
   }
 
@@ -580,12 +579,12 @@ textarea:focus {
     font-size: 1.7rem;
   }
 
-  .visibleOFF{
+  .visibleOFF {
     top: 14%;
     left: -100%;
   }
 
-  .visibleOn{
+  .visibleOn {
     top: 14%;
     left: 0;
   }

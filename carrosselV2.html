@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #btnAnt {
+        position: absolute;
+        left: 10%;
+      }
+
+      #btnProx {
+        position: absolute;
+        left: 75%;
+      }
+
+      #carrossel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .imageCarrossel {
+        width: 100%;
+        height: 50vh;
+        background-image: url("images/IMG.jpg");
+        background-position: center;
+        background-size: cover;
+        transition: 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="carrossel">
+      <img src="images/seta1.png" id="btnAnt" onclick="slideAnt()" />
+      <div class="imageCarrossel">
+        <img />
+      </div>
+      <img src="images/seta.png" id="btnProx" onclick="proxSlide()" />
+    </div>
+
+    <script>
+      const btnAnt = document.querySelector("#btnAnt");
+      const btnProx = document.querySelector("#btnProx");
+      const image = document.querySelector(".imageCarrossel");
+
+      const timeInterval = 3000;
+      let interval = setInterval(proxSlide, timeInterval);
+      let count = 1;
+
+      const oneImage = "url('images/IMG.jpg')";
+      const twoImage = "url('images/IMG1.jpg')";
+      const threeImage = "url('images/IMG2.jpg')";
+
+      function slideAnt() {
+        clearInterval(interval);
+        interval = setInterval(proxSlide, timeInterval);
+        count--;
+        switch (count) {
+          case 1:
+            image.style.backgroundImage = oneImage;
+            break;
+          case 2:
+            image.style.backgroundImage = twoImage;
+            break;
+          case 3:
+            image.style.backgroundImage = threeImage;
+            break;
+          default:
+            image.style.backgroundImage = threeImage;
+            count = 3;
+            break;
+        }
+      }
+
+      function proxSlide() {
+        clearInterval(interval);
+        interval = setInterval(proxSlide, timeInterval);
+        count++;
+        switch (count) {
+          case 1:
+            image.style.backgroundImage = oneImage;
+            break;
+          case 2:
+            image.style.backgroundImage = twoImage;
+            break;
+          case 3:
+            image.style.backgroundImage = threeImage;
+            break;
+          default:
+            image.style.backgroundImage = oneImage;
+            count = 1;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

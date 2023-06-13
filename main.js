@@ -9,15 +9,15 @@ hamburguer.addEventListener("click", () => {
 //Carrossel seta com looping - by: t3xdev
 const btnAnt = document.querySelector("#btnAnt");
 const btnProx = document.querySelector("#btnProx");
-const image = document.querySelector("#imageCarrossel");
+const image = document.querySelector(".imageCarrossel");
 
 const timeInterval = 3000;
 let interval = setInterval(proxSlide, timeInterval);
 let count = 1;
 
-const oneImage = "images/IMG.jpg";
-const twoImage = "images/IMG1.jpg";
-const threeImage = "images/IMG2.jpg";
+const oneImage = "url('images/IMG.jpg')";
+const twoImage = "url('images/IMG1.jpg')";
+const threeImage = "url('images/IMG2.jpg')";
 
 function slideAnt() {
   clearInterval(interval);
@@ -25,16 +25,16 @@ function slideAnt() {
   count--;
   switch (count) {
     case 1:
-      image.src = oneImage;
+      image.style.backgroundImage = oneImage;
       break;
     case 2:
-      image.src = twoImage;
+    image.style.backgroundImage = twoImage;
       break;
     case 3:
-      image.src = threeImage;
+    image.style.backgroundImage = threeImage;
       break;
     default:
-      image.src = threeImage;
+    image.style.backgroundImage = threeImage;
       count = 3;
       break;
   }
@@ -46,16 +46,16 @@ function proxSlide() {
   count++;
   switch (count) {
     case 1:
-      image.src = oneImage;
+    image.style.backgroundImage = oneImage;
       break;
     case 2:
-      image.src = twoImage;
+    image.style.backgroundImage = twoImage;
       break;
     case 3:
-      image.src = threeImage;
+    image.style.backgroundImage = threeImage;
       break;
     default:
-      image.src = oneImage;
+    image.style.backgroundImage = oneImage;
       count = 1;
       break;
   }

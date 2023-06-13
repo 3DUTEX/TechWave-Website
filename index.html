@@ -34,7 +34,9 @@
       <h1>LOJA FÍSICA</h1>
       <div id="carrossel">
         <img src="images/seta1.png" id="btnAnt" onclick="slideAnt()" />
-        <img src="images/IMG.jpg" id="imageCarrossel" />
+        <div class="imageCarrossel">
+          <img />
+        </div>
         <img src="images/seta.png" id="btnProx" onclick="proxSlide()" />
       </div>
     </section>
@@ -51,48 +53,51 @@
     <section class="produtosGamers">
       <h1>PRODUTOS GAMERS</h1>
 
-        <div class="prodGroup">
-          <div class="prodGam">
-            <img src="images/headset.png" />
-            <ul>
-              <span class="frete">Frete grátis</span>
-              <h1>Koton Evil</h1>
-              <li>Tamanho do produto: 185 x 155 x 78mm</li>
-              <li>Peso: 192g ± 10g</li>
-              <li>Tamanho do alto-falante: 40mm</li>
-            </ul>
-            <h2>R$ 199,90</h2>
-          </div>
-  
-          <div class="prodGam">
-            <img src="images/pc-gamer.png" />
-            <ul>
-              <span class="frete">Frete grátis</span>
-              <h1>Ruby Fire</h1>
-              <li>Intel Core i7 3.4 Ghz</li>
-              <li>16GB RAM</li>
-              <li>GeForce RTX 3050 8GB</li>
-            </ul>
-            <h2>R$ 3980,00</h2>
-          </div>
-  
-          <div class="prodGam">
-            <img src="images/mouse-gamer.png" />
-            <ul>
-              <span class="frete">Frete grátis</span>
-              <h1>Letron Legacy</h1>
-              <li>2400DPI</li>
-              <li>Peso: 192g ± 10g</li>
-              <li>Tamanho do alto-falante: 40mm</li>
-            </ul>
-            <h2>R$ 299,99</h2>
-          </div>
+      <div class="prodGroup">
+        <div class="prodGam">
+          <img src="images/headset.png" />
+          <ul>
+            <span class="frete">Frete grátis</span>
+            <h1>Koton Evil</h1>
+            <li>Tamanho do produto: 185 x 155 x 78mm</li>
+            <li>Peso: 192g ± 10g</li>
+            <li>Tamanho do alto-falante: 40mm</li>
+          </ul>
+          <h2>R$ 199,90</h2>
         </div>
 
+        <div class="prodGam">
+          <img src="images/pc-gamer.png" />
+          <ul>
+            <span class="frete">Frete grátis</span>
+            <h1>Ruby Fire</h1>
+            <li>Intel Core i7 3.4 Ghz</li>
+            <li>16GB RAM</li>
+            <li>GeForce RTX 3050 8GB</li>
+          </ul>
+          <h2>R$ 3980,00</h2>
+        </div>
+
+        <div class="prodGam">
+          <img src="images/mouse-gamer.png" />
+          <ul>
+            <span class="frete">Frete grátis</span>
+            <h1>Letron Legacy</h1>
+            <li>2400DPI</li>
+            <li>Peso: 192g ± 10g</li>
+            <li>Tamanho do alto-falante: 40mm</li>
+          </ul>
+          <h2>R$ 299,99</h2>
+        </div>
+      </div>
     </section>
 
     <section class="contato">
-      <form action="https://formsubmit.co/t3xdev@gmail.com" method="POST" class="contato visibleOFF">
+      <form
+        action="https://formsubmit.co/t3xdev@gmail.com"
+        method="POST"
+        class="contato visibleOFF"
+      >
         <label for="nome">Nome: </label>
         <input type="text" id="nome" name="nome" required />
         <label for="email">Email: </label>
