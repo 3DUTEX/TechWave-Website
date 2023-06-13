@@ -414,11 +414,6 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
-  #seta-cima {
-    top: 85%;
-    left: 70%;
-  }
-
   .hamburguer {
     display: block;
   }
@@ -580,12 +575,12 @@ textarea:focus {
   }
 
   .visibleOFF {
-    top: 14%;
+    top: 20%;
     left: -100%;
   }
 
   .visibleOn {
-    top: 14%;
-    left: 0;
+    top: 20%;
+    left: 5%;
   }
 }
